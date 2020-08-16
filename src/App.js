@@ -5,20 +5,23 @@ import Body from "./Components/Body/Body";
 import SearchPage from "./Pages/SearchPage/SearchPage";
 import RestaurantDetails from "./Pages/RestaurantDetails/RestaurantDetails";
 import Slider from "./Pages/Slider/Slider";
+import Place from "./Pages/SearchPage/Places/GooglePlace"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
+   
       <Router>
-        <Header />
+           <Header />
         <Switch>
           <Route exact path="/">
             <Slider />
             <Body />
           </Route>
-          <Route exact path="/search">
-            <SearchPage />
+          <Route exact path="/search" component={SearchPage}/>
+           <Route exact path="/search">
+            < Place/>
           </Route>
           <Route exact path="/restaurant">
             <RestaurantDetails />

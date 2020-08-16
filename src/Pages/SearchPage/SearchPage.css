@@ -10,21 +10,22 @@
   width: 60%;
   height: 70px;
   border: 1px solid lightslategray;
-  margin-left: 30rem;
+  margin-left: 20%;
 }
 
 .searchpage__input > input {
   flex: 1;
   border: none;
   height: 65px;
+  width: 50%;
   padding-left: 30px;
 }
 
 .searchpage__input > .searchpage__icon {
   width: 80px !important;
-  background-color: #fafafa;
+
   border-left: 1px solid lightslategray;
-  color: gray;
+  color: rgb(15, 15, 15);
   cursor: pointer;
   height: 50px;
 }
@@ -39,7 +40,11 @@
 }
 
 .searchpage > hr {
+  color: black;
   margin-top: 8rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.googleplace{
+  padding-top: 18%;
 }

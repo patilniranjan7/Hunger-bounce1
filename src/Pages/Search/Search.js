@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   InputLabel,
@@ -22,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Search() {
   const classes = useStyles();
+  const [show , setshow] = useState(true);
   return (
+    <div>{show ?(null):(null) }
     <div>
       <Link to="/search">
         <FormControl className={`search ${classes.root}`}>
@@ -36,6 +38,7 @@ function Search() {
           </Button>
         </FormControl>
       </Link>
+    </div>
     </div>
   );
 }
