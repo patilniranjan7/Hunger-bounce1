@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import GoogleComponent from "../GooglePlaces/GoogleComponent";
 //import { GoogleComponent } from 'react-google-location'
-const API_KEY = "AIzaSyDo6TAihyVcLfi24e3Jym11WQR0Iv6CvEU";
+const API_KEY = "";
 
 function InputSearch(props) {
  let history = useHistory();
