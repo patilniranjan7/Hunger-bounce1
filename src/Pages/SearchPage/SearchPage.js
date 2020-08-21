@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./SearchPage.css";
-import { GoogleComponent } from 'react-google-location'
+
 import SearchIcon from "@material-ui/icons/Search";
 import RestaurantItems from "./../RestaurantItems/RestaurantItems";
 import css from "./css.module.css"
-const API_KEY = "";
+
 
 //          locationBoxStyle={'custom-style'}
 //          locationListStyle={'custom-style-list'}
 
-function SearchPage() {
+function SearchPage(props) {
   const [place , setplace] = useState({});
   const [show , setshow] = useState(false);
   const [inputSearch, setInputSearch] = useState("");
@@ -29,7 +29,7 @@ function SearchPage() {
       headers: headers,
     };
 
-    let url = `https://developers.zomato.com/api/v2.1/search?entity_type=landmark&q=${inputSearch}&start=0&count=20&lat=${place.coordinates.lat}&lon=${place.coordinates.lng}`;
+    let url = `https://developers.zomato.com/api/v2.1/search?entity_type=landmark&q=${inputSearch}&start=0&count=20&lat=${props.lat}&lon=${props.lng}`;
     await fetch(url, options)
       .then((response) => response.json())
       .then((data) => {
@@ -72,20 +72,7 @@ function SearchPage() {
                 src = "https://image.freepik.com/free-photo/view-decoration-with-delicious-food-copy-space_23-2148308898.jpg"
                 className={css.background}
             />
-       <div>
-         <GoogleComponent
-          apiKey={API_KEY}
-          language={'en'}
-          country={'country:in'}
-          coordinates={true}
-          placeholder={'Start typing location'}
-          onChange={(e) => { 
-          setplace(e)
-           if(place.coordinates){
-            cor(); 
-           }} }/>
-         
-      </div>
+
     </div>)
     :(<div className="searchpage">
       <div className="searchpage__input">

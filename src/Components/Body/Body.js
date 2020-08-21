@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Body() {
+function Body(props) {
   const [coordinates, setCoordinates] = useState({});
-  console.log(coordinates.lat, coordinates.lon);
-  const [nearByRestaurantArray, setNearByRestaurantArray] = useState([]);
-  console.log(nearByRestaurantArray);
 
-  useEffect(() => {
+  const [nearByRestaurantArray, setNearByRestaurantArray] = useState([]);
+  console.log("===>"+props.lat);
+
+  /*useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       // let coords = {
       //   lat: position.coords.latitude,
@@ -36,7 +36,7 @@ function Body() {
       setCoordinates(position.coords);
       // getRestaurantList();
     });
-  }, []);
+  }, []);*/
 
   // 18.604433
   // 73.78307459999999
@@ -56,7 +56,7 @@ function Body() {
       headers: headers,
     };
     // console.log(coordinates.lat, coordinates.lon);
-    let url = `https://developers.zomato.com/api/v2.1/search?lat=${coordinates.latitude}&lon=${coordinates.longitude}`;
+    let url = `https://developers.zomato.com/api/v2.1/search?lat=${props.lat}&lon=${props.lng}`;
     console.log(url);
     await fetch(url, options)
       .then((response) => response.json())

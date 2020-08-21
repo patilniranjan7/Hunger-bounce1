@@ -1,5 +1,6 @@
 .LOGO {
   width: 80px;
+  height: 80px;
   margin-bottom: 0;
 }
 
@@ -10,17 +11,22 @@
   padding: 20px;
   /* border: 1px solid black; */
   margin-bottom: 0;
-
+  height: 80px;
   background-color: #ffcb47;
   /* background-color: #fff; */
   border-radius: 5px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-  width: 98%;
+  width: 100%;
   z-index: 100;
 }
 
-.header__inputs {
-  margin-top: 10px;
-  margin-bottom: 0;
-  display: flex;
+.buttons {
+  padding: 10px;
+  padding-right: 40px;
+  /* display: flex; */
+  /* border: 1px solid black; */
+}
+
+.first {
+  margin-right: 100px;
 }

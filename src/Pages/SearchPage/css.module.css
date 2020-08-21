@@ -2,7 +2,7 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  height:500px;
+  height:100%;
   width: 100%;
   object-fit: cover;
   /* filter: grayscale(50%); */

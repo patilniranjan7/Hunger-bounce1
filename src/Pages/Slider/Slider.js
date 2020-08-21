@@ -1,13 +1,24 @@
 import React from "react";
 import food1 from "./food1.png";
-import food2 from "./food2.png";
+//import food2 from "./food2.png";
 import food3 from "./food3.png";
 import food4 from "./food4.png";
 import food5 from "./food5.png";
+import { useState} from "react";
+import Body from "../../Components/Body/Body";
+
 import "./Slider.css";
+/*
+        <div className="slide">
+          <img src={food2} className="food1" />
+        </div>
+*/
+ 
 function Slider() {
+  const [location , setlocation] = useState({});
+  const [show , setshow] = useState(false);
   return (
-    <div className="slider middle">
+      <div className="slider middle">
       <div className="slides">
         <input type="radio" name="r" id="r1" />
         <input type="radio" name="r" id="r2" />
@@ -16,9 +27,6 @@ function Slider() {
         <input type="radio" name="r" id="r5" />
         <div className="slide s1">
           <img src={food1} className="food1" />
-        </div>
-        <div className="slide">
-          <img src={food2} className="food1" />
         </div>
         <div className="slide">
           <img src={food3} className="food1" />
@@ -37,7 +45,8 @@ function Slider() {
         <label htmlFor="r4" className="bar"></label>
         <label htmlFor="r5" className="bar"></label>
       </div>
-    </div>
+
+      </div>
   );
 }
 
